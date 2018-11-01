@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main(void)
+{
+	int arr[20],i,j,n,x;
+	int min = -1,max = 0;
+	printf("Enter the size for Array : ");
+	scanf("%d",&n);
+	for(i = 0;i<n;i++)
+	{
+		scanf("%d",&x);
+		arr[i] = x;
+		if(x>0)
+		{
+			if(max<x){max = x;}
+		}
+		else
+		{
+			if(min>x){min = x;}
+		}	
+	}
+	for(i = 0;i<=n;i++)
+	{
+		for(j = min;j<=max;j++)
+		{
+			if(arr[i]<0)
+			{
+				printf("*");
+			}
+			else if(arr[i]>0)
+			{
+				printf("*");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
+	
+	}
+}
