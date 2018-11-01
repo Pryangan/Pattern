@@ -1,3 +1,13 @@
+/*
+    ****       
+         ***** 
+         ******
+********       
+         ***   
+         
+
+*/
+
 #include<stdio.h>
 
 int main(void)
@@ -25,18 +35,28 @@ int main(void)
 		{
 			if(arr[i]<0)
 			{
-				printf("*");
-			}
-			else if(arr[i]>0)
-			{
-				printf("*");
+				if(j==arr[i])
+				{
+					printf("*");
+					arr[i] = arr[i] + 1;
+				}
+				else
+				{
+					printf(" ");
+				}
 			}
 			else
 			{
-				printf(" ");
+				if(j>0 && j<=arr[i])
+				{
+					printf("*");
+				}
+				else
+				{
+					printf(" ");
+				}
 			}
 		}
 		printf("\n");
-	
 	}
 }
